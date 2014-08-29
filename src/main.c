@@ -399,7 +399,7 @@ int main(void)
 				{
                     float x_rate_avg = 1000.0f * x_rate_sum / valid_frame_count; // mrad/sec
                     float y_rate_avg = 1000.0f * y_rate_sum / valid_frame_count; // mrad/sec
-                    qual = qualSum / valid_frame_count;
+                    qual = qualSum / 40;
 
 					// send flow
 					mavlink_msg_optical_flow_send(MAVLINK_COMM_0, get_boot_time_ms() * 1000, global_data.param[PARAM_SENSOR_ID],
